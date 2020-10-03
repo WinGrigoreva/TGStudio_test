@@ -1,0 +1,28 @@
+.user-table__row
+    display: flex
+    justify-content: space-between
+    align-items: center  
+    width: 100%
+    padding-bottom: 30px
+    & > *
+        width: 25%
+        word-break: break-all
+        text-align: left
+    & > *:last-child
+        width: auto
+    & > * + *
+        padding-left: 1rem
+
+.user-table__reg-date
+    width: auto
+    min-width: auto
+
+@media ( max-width: 900px )
+    .user-table__row > *
+        display: none
+    .user-table__row > *:last-child, .user-table__row > *:first-child
+        display: flex
+    .user-table__row > *:first-child
+        width: auto
+            
+             
