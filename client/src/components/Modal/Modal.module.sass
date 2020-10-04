@@ -1,0 +1,35 @@
+$borderColor: #141213
+$bgrModal: #dedbe6
+$fontModal: #141213
+
+    
+.modal
+    position: fixed
+    background: rgba(#000000, .7)
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 100
+
+.modal__inner
+    background: $bgrModal
+    border: 1px solid $borderColor
+    border-radius: 5px
+    padding: 2rem
+    color: $fontModal
+
+.modal__header
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid $borderColor
+    padding-bottom: 20px
+    margin-bottom: 20px
+    & > *
+        margin: 0
+    & > * + *
+        padding-left: 20px
+

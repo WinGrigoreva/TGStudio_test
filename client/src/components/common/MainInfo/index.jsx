@@ -8,7 +8,7 @@ export class MainInfo extends React.Component {
                 <img src={this.props.user.picture.thumbnail} alt="user photo" className={s["user-table__info-photo"]}/>
                 <div className={s["user-table__info-main"]}>
                     <p>{`${this.props.user.name.last} ${this.props.user.name.first}`}</p>
-                    <p>{this.props.user.email}</p>
+                    <a href={`mailto:${this.props.user.email}`}>{this.props.user.email}</a>
                 </div>
             </div>
         )

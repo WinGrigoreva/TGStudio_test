@@ -1,14 +1,13 @@
 import React from "react";
-import {Btn} from "../../common/Btn"
 
 export class HeaderTable extends React.Component {
     render () {
         return (
-            <div>
+            <div className={s["users-table__header"]}>
                 <span>User</span>
                 <span>Reistration date</span>
                 <span>Address</span>
-                <Btn btnView="arrow"/>
+                <span>View more</span>
             </div>
         )
     }

@@ -1,17 +1,25 @@
+$oddTableRow: #3d4966
+$evenTableRow: #55668d
+
 .user-table__row
     display: flex
     justify-content: space-between
     align-items: center  
     width: 100%
-    padding-bottom: 30px
+    padding: 2rem
     & > *
         width: 25%
         word-break: break-all
         text-align: left
+        
     & > *:last-child
         width: auto
     & > * + *
         padding-left: 1rem
+    &:nth-child(odd)
+        background-color: $oddTableRow
+    &:nth-child(even)
+        background-color: $evenTableRow
 
 .user-table__reg-date
     width: auto
@@ -24,5 +32,8 @@
         display: flex
     .user-table__row > *:first-child
         width: auto
+    .user-table__row
+        padding: 5px
+
             
              

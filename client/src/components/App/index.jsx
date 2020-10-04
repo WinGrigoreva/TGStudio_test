@@ -1,16 +1,20 @@
 import React from "react";
-import { Header } from "../Header";
-import { ContentTable } from "../table/ContentTable";
-import s from "./App.module.sass"
-
+import { MainPage } from "../MainPage";
+import { UserPage } from "../UserPage";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 export class App extends React.Component {
     render() {
         return (
-            <div className={s.container}>
-                <Header />
-                <ContentTable />
-            </div>
+            <BrowserRouter>
+                <div className="container">
+                    <Switch>
+                        <Route exact path="/" component={MainPage} />
+                        <Route path="/user/:id" component={UserPage} />
+                        <Route component={()=><h2>Not found</h2>} />
+                    </Switch>
+                </div>
+            </BrowserRouter>
         )
     }
 }

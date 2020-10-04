@@ -1,3 +1,5 @@
+$fontTitleColor: #7dbd41
+
 .user-table__info
     display: flex
 .user-table__info-photo
@@ -8,3 +10,15 @@
     min-height: 80px
 .user-table__info-main
     padding-left: 15px 
+    & > *:first-child
+        font-weight: bold
+        color: $fontTitleColor
+        font-size: 1.2rem
+
+@media ( max-width: 900px )
+    .user-table__info-main
+        display: flex
+        flex-direction: column
+        justify-content: center
+        & > *
+            margin: 0 
