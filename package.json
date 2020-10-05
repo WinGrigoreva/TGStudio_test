@@ -4,6 +4,7 @@
   "description": "",
   "private": "true",
   "scripts": {
+    "start": "node server.js",
     "build": "webpack --mode production",
     "watch": "webpack --watch --mode development"
   },
@@ -11,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
     "moment": "^2.29.0",
